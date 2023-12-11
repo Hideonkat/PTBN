@@ -1,39 +1,33 @@
 ﻿using System;
-
-namespace ptbn;
-
  class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Phuong trinh bac nhat");
-        Console.WriteLine("ax+b=0, hay nhap a,b");
-        Console.Write("a:");
+        Console.WriteLine("Dien can nang vao dum(kg):");
         Double a = Double.Parse(Console.ReadLine());
-        Console.Write("b:");
+        Console.WriteLine("Dien chieu cao vao dum(m):");
         Double b = Double.Parse(Console.ReadLine());
+        Double c = a/Math.Pow(b,2);
         
-        if (a != 0)
+        Console.WriteLine("BMI:" + c);
+        if(c < 18.5)
         {
-            Console.WriteLine("Phuong trinh co nghiem:" + -b/a);
+             Console.WriteLine("Suy dinh duong roi nhe"); 
 
         }
-        else 
+        else if (c <= 25.0)
         {
-            if(b==0)
-            {
-                Console.WriteLine("Vo so nghiem");
+            Console.WriteLine("Dang dep day");
 
-            }
-            else
-            {
-                Console.WriteLine("Vo nghiem");
-            }
-
-            
         }
-
-
+        else if( c <= 30)
+        {
+            Console.WriteLine("Beo roi an it thoi");
+        }
+        else
+        {
+            Console.WriteLine("Thich lam pig hay gi?");
+        }
 
 
         }
